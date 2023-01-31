@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-  max-width: 54rem;
-  width: 100%;
-  margin: 0 auto;
   position: relative;
   top: -100px;
   padding: 32px 32px 32px 40px;
