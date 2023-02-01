@@ -10,9 +10,17 @@ export const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
+
+  img {
+    max-width: 148px;
+    width: 100%;
+    border-radius: 8px;
+  }
 `;
 
-export const ProfileInfo = styled.div``;
+export const ProfileInfo = styled.div`
+  width: 100%;
+`;
 
 export const ProfileInfoHeader = styled.header`
   display: flex;
