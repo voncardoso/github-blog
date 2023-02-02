@@ -20,7 +20,8 @@ export function Home() {
   const user = useContextSelector(UserContext, (context) => {
     return context.user;
   });
-  console.log(user);
+
+  
   return (
     <HomeContainer>
       <Header />

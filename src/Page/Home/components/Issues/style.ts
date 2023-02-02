@@ -13,6 +13,7 @@ export const IssuesContainer = styled.ul`
     border-radius: 10px;
     padding: 2rem;
     cursor: pointer;
+    border: 2px solid transparent;
     header {
       display: flex;
       justify-content: space-between;
@@ -20,7 +21,7 @@ export const IssuesContainer = styled.ul`
       gap: 16px;
       margin-bottom: 20px;
       h2 {
-        max-width: 283px;
+        max-width: 282px;
         width: 100%;
         font-size: 1.25rem;
       }
