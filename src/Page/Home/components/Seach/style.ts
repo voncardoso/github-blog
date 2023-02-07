@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SeachContainer = styled.div`
+export const SeachContainer = styled.form`
   position: relative;
   top: -20px;
 `;
