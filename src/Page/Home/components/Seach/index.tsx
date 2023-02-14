@@ -12,13 +12,13 @@ interface SearchInputProps {
 export function Seach({ FetchIssues, issuesLength }: SearchInputProps) {
   const { register, handleSubmit } = useForm();
 
-  async function teste(data: any) {
+  async function handleSeach(data: any) {
     console.log("foi", data.query);
     await FetchIssues(data.query);
   }
 
   return (
-    <SeachContainer onSubmit={handleSubmit(teste)}>
+    <SeachContainer onSubmit={handleSubmit(handleSeach)}>
       <SeachHeader>
         <strong>Publicações</strong>
         <p>{issuesLength} publicações</p>

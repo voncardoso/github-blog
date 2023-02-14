@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useContextSelector } from "use-context-selector";
 import { UserContext } from "../../../../context/UserContext";
 import { IssuesContainer } from "./style";
 
 export interface IPost {
+  id: string;
   title: string;
   body: string;
   created_at: string;
@@ -15,12 +17,23 @@ export interface IPost {
 }
 
 export function Issues({ post }: IPost[] | any) {
+  const navigate = useNavigate();
   console.log("post", post);
+
+  function handleItemPost(issue: string) {
+    navigate(`post/${issue}`);
+  }
+
   return (
     <IssuesContainer>
-      {post.map((issue: any) => {
+      {post.map((issue: IPost) => {
         return (
-          <li key={issue.id}>
+          <li
+            key={issue.id}
+            onClick={() => {
+              handleItemPost(issue.id);
+            }}
+          >
             <header>
               <h2>{issue.title}</h2>
 
