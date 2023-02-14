@@ -20,7 +20,7 @@ export function Issues({ post }: IPost[] | any) {
   const navigate = useNavigate();
   console.log("post", post);
 
-  function handleItemPost(issue: string) {
+  function handleItemPost(issue: number) {
     navigate(`post/${issue}`);
   }
 
@@ -31,7 +31,7 @@ export function Issues({ post }: IPost[] | any) {
           <li
             key={issue.id}
             onClick={() => {
-              handleItemPost(issue.id);
+              handleItemPost(issue.number);
             }}
           >
             <header>
